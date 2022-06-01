@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'cloudinary_storage', # added in after linked to cloudinary
     'django.contrib.staticfiles',
-    'cloudinary' # as above
+    'cloudinary', # as above
     'blog',
 ]
 
