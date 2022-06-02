@@ -41,12 +41,22 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'cloudinary_storage', # added in after linked to cloudinary
+    'django.contrib.sites',  #added with allauth along with next 3
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'cloudinary_storage',  # added in after linked to cloudinary
     'django.contrib.staticfiles',
-    'cloudinary', # as above
+    'cloudinary',  # as above
     'django_summernote',
     'blog',
 ]
+
+SITE_ID = 1  # added with allauth
+
+LOGIN_REDIRECT_URL = '/'  # added with allauth
+LOGOUT_REDIRECT_URL = '/'  # added with allauth
+ACCOUNT_EMAIL_VERIFICATION = 'none'  # added with allauth
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
